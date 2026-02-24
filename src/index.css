@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-accent: #10b981; /* Emerald 500 */
+  --color-accent-dark: #059669; /* Emerald 600 */
+  --color-accent-light: #d1fae5; /* Emerald 100 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased text-slate-900 bg-slate-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.dark .glass {
+  @apply bg-slate-900/70 border-slate-800/50;
+}
+
+.section-padding {
+  @apply py-12 px-6 md:px-12 lg:px-24;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-accent text-white rounded-full font-medium transition-all hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/20 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-white text-slate-900 border border-slate-200 rounded-full font-medium transition-all hover:bg-slate-50 hover:shadow-md active:scale-95;
+}
+
+.card {
+  @apply bg-white rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1;
+}
+
+.dark .card {
+  @apply bg-slate-900 border-slate-800;
+}
