@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -14,6 +14,10 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,25 +52,28 @@ export default function Navbar() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="text-sm font-medium text-slate-600 hover:text-accent transition-colors relative group"
+              className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-accent transition-colors relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
             </motion.a>
           ))}
-          <motion.a
-            href="#contact"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="btn-primary py-2 px-5 text-sm flex items-center gap-2"
-          >
-            LET'S TALK <Mail size={16} />
-          </motion.a>
+          
+          <div className="flex items-center gap-4">
+            <motion.a
+              href="#contact"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="btn-primary py-2 px-5 text-sm flex items-center gap-2"
+            >
+              LET'S TALK <Mail size={16} />
+            </motion.a>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-slate-900"
+          className="md:hidden text-slate-900 dark:text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -80,7 +87,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-slate-100 overflow-hidden"
+            className="md:hidden bg-white dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 overflow-hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => (
@@ -88,18 +95,20 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg font-medium text-slate-600 hover:text-accent"
+                  className="text-lg font-medium text-slate-600 dark:text-slate-400 hover:text-accent"
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="flex space-x-4 pt-4 border-t border-slate-100">
-                <a href="https://github.com" className="text-slate-400 hover:text-accent">
-                  <Github size={20} />
-                </a>
-                <a href="https://www.linkedin.com/in/vishalini-b-7820062a4/" className="text-slate-400 hover:text-accent">
-                  <Linkedin size={20} />
-                </a>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+                <div className="flex space-x-4">
+                  <a href="https://github.com" className="text-slate-400 hover:text-accent">
+                    <Github size={20} />
+                  </a>
+                  <a href="https://www.linkedin.com/in/vishalini-b-7820062a4/" className="text-slate-400 hover:text-accent">
+                    <Linkedin size={20} />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

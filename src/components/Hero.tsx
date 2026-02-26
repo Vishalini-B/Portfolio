@@ -3,10 +3,10 @@ import { Download, Github, Linkedin, Mail, ChevronRight, Sparkles } from 'lucide
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center pt-20 pb-8 overflow-hidden bg-white">
+    <section id="home" className="relative min-h-[80vh] flex items-center pt-20 pb-8 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300">
       {/* Modern Grid Background */}
-      <div className="absolute inset-0 z-0 opacity-[0.03]" 
-           style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 z-0 opacity-[0.03] dark:opacity-[0.05]" 
+           style={{ backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
       {/* Animated Gradient Orbs */}
       <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-accent/10 rounded-full blur-[120px] animate-pulse" />
@@ -23,29 +23,29 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-slate-600 text-[10px] font-bold mb-6 shadow-sm"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold mb-6 shadow-sm"
             >
               <Sparkles size={12} className="text-accent" />
               <span className="uppercase tracking-wider">Available for new opportunities</span>
             </motion.div>
             
-            <h1 className="text-6xl md:text-9xl font-display font-bold leading-[0.9] mb-6 tracking-tighter">
+            <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] mb-6 tracking-tighter text-slate-900 dark:text-white">
               VISHALINI B<br />
             </h1>
             
             <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
-              <p className="text-lg text-slate-500 max-w-md leading-relaxed font-light">
+              <p className="text-lg text-slate-500 dark:text-slate-400 max-w-md leading-relaxed font-light">
                 A Chennai-based developer 
                 merging <span className="italic">clean code</span> with <span className="italic">elegant design</span>.
               </p>
               
-              <div className="h-px w-10 bg-slate-200 hidden md:block" />
+              <div className="h-px w-10 bg-slate-200 dark:bg-slate-800 hidden md:block" />
               
               <div className="flex items-center gap-3">
-                <a href="https://github.com" className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+                <a href="https://github.com" className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
                   <Github size={16} />
                 </a>
-                <a href="https://www.linkedin.com/in/vishalini-b-7820062a4/" className="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+                <a href="https://www.linkedin.com/in/vishalini-b-7820062a4/" className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
                   <Linkedin size={16} />
                 </a>
               </div>
@@ -65,7 +65,7 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#" 
-                className="btn-secondary px-6 py-3 text-base flex items-center gap-2"
+                className="btn-secondary px-6 py-3 text-base flex items-center gap-2 dark:bg-slate-900 dark:text-white dark:border-slate-800"
               >
                 Resume <Download size={18} />
               </motion.a>
@@ -79,9 +79,9 @@ export default function Hero() {
             className="relative"
           >
             {/* Organic Shape Mask for Profile */}
-            <div className="relative w-full aspect-[4/5] max-w-[300px] mx-auto">
-              <div className="absolute inset-0 bg-accent/5 rounded-[2.5rem] -rotate-6 scale-105" />
-              <div className="absolute inset-0 border border-slate-100 rounded-[2.5rem] rotate-3" />
+            <div className="relative w-full aspect-[4/5] max-w-[350px] mx-auto">
+              <div className="absolute inset-0 bg-accent/5 dark:bg-accent/10 rounded-[2.5rem] -rotate-6 scale-105" />
+              <div className="absolute inset-0 border border-slate-100 dark:border-slate-800 rounded-[2.5rem] rotate-3" />
               
               <div className="relative z-10 w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl">
                 <img
@@ -108,11 +108,11 @@ export default function Hero() {
       </div>
       
       {/* Bottom Marquee Text */}
-      <div className="absolute bottom-0 left-0 right-0 py-4 bg-slate-50/50 border-t border-slate-100 overflow-hidden whitespace-nowrap">
+      <div className="absolute bottom-0 left-0 right-0 py-4 bg-slate-50/50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800 overflow-hidden whitespace-nowrap">
         <motion.div 
           animate={{ x: [0, -1000] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="flex gap-20 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300"
+          className="flex gap-20 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 dark:text-slate-700"
         >
           {[...Array(10)].map((_, i) => (
             <span key={i} className="flex items-center gap-4">
@@ -133,12 +133,12 @@ function TechBadge({ icon, label, delay }: { icon: string, label: string, delay:
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.5 }}
       whileHover={{ y: -5 }}
-      className="glass px-4 py-3 rounded-2xl flex items-center gap-3 shadow-xl border border-white/40"
+      className="glass px-4 py-3 rounded-2xl flex items-center gap-3 shadow-xl border border-white/40 dark:border-slate-800"
     >
       <div className="w-8 h-8 flex items-center justify-center">
         <img src={icon} alt={label} className="w-full h-full object-contain" />
       </div>
-      <span className="text-xs font-bold text-slate-700">{label}</span>
+      <span className="text-xs font-bold text-slate-700 dark:text-slate-300">{label}</span>
     </motion.div>
   );
 }

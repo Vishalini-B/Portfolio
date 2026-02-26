@@ -34,10 +34,10 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="work" className="section-padding bg-white relative overflow-hidden">
+    <section id="work" className="section-padding bg-white dark:bg-slate-950 relative overflow-hidden transition-colors duration-300">
       {/* Grid Background */}
-      <div className="absolute inset-0 z-0 opacity-[0.02]" 
-           style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 z-0 opacity-[0.02] dark:opacity-[0.05]" 
+           style={{ backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-8">
@@ -55,7 +55,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-display font-bold leading-[0.9] tracking-tighter"
+              className="text-5xl md:text-7xl font-display font-bold leading-[0.9] tracking-tighter text-slate-900 dark:text-white"
             >
               FEATURED <br />
               <span className="text-accent italic">PROJECTS</span>
@@ -65,7 +65,7 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="btn-secondary text-sm px-10 py-4"
+            className="btn-secondary text-sm px-10 py-4 dark:bg-slate-900 dark:text-white dark:border-slate-800"
           >
             Explore All Works
           </motion.button>
@@ -81,7 +81,7 @@ export default function Portfolio() {
               className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}
             >
               <div className="w-full lg:w-[50%]">
-                <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl bg-slate-100 max-w-[500px] mx-auto">
+                <div className="relative group overflow-hidden rounded-[3rem] shadow-2xl bg-slate-100 dark:bg-slate-900 max-w-[500px] mx-auto">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={project.image}
@@ -109,28 +109,28 @@ export default function Portfolio() {
                     <p className="text-accent font-bold text-xs uppercase tracking-widest">{project.category}</p>
                   </div>
                   
-                  <h4 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight tracking-tighter group-hover:text-accent transition-colors">
+                  <h4 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight tracking-tighter group-hover:text-accent transition-colors text-slate-900 dark:text-white">
                     {project.title}
                   </h4>
                   
-                  <p className="text-lg text-slate-500 mb-6 leading-relaxed font-light">
+                  <p className="text-lg text-slate-500 dark:text-slate-400 mb-6 leading-relaxed font-light">
                     {project.description}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map(tag => (
-                      <span key={tag} className="px-4 py-1.5 bg-slate-50 border border-slate-100 text-slate-400 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                      <span key={tag} className="px-4 py-1.5 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-slate-400 dark:text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="pt-10 border-t border-slate-100 flex items-center justify-between">
-                    <button className="flex items-center gap-3 text-slate-900 font-bold hover:text-accent hover:gap-5 transition-all group">
+                  <div className="pt-10 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                    <button className="flex items-center gap-3 text-slate-900 dark:text-white font-bold hover:text-accent hover:gap-5 transition-all group">
                       VIEW CASE STUDY 
                       <ArrowRight size={20} className="text-accent group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <span className="text-7xl font-display font-bold text-slate-50 select-none">
+                    <span className="text-7xl font-display font-bold text-slate-50 dark:text-slate-900 select-none">
                       0{i + 1}
                     </span>
                   </div>
