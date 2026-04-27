@@ -117,7 +117,7 @@ export default function Hero() {
           {[...Array(10)].map((_, i) => (
             <span key={i} className="flex items-center gap-4">
               <Sparkles size={10} />
-              React Developer • UI/UX Designer • Node.js Expert • Problem Solver
+              React Developer • UI/UX Designer • AI Enthusiast • Firebase Expert
             </span>
           ))}
         </motion.div>

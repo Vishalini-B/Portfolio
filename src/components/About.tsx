@@ -71,10 +71,10 @@ export default function About() {
 
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
               {[
-                { icon: Layout, label: 'UI/UX Design', sub: 'Figma & Wireframing', color: 'bg-emerald-50 text-emerald-500' },
-                { icon: Code2, label: 'Frontend', sub: 'React & Tailwind', color: 'bg-blue-50 text-blue-500' },
-                { icon: Database, label: 'Backend', sub: 'Node & MongoDB', color: 'bg-purple-50 text-purple-500' },
-                { icon: GraduationCap, label: 'Education', sub: 'B.Tech IT', color: 'bg-orange-50 text-orange-500' }
+                { icon: Layout, label: 'UI/UX Design', sub: 'Figma & User-Centric', color: 'bg-emerald-50 text-emerald-500' },
+                { icon: Code2, label: 'Full-Stack', sub: 'React, Node & Firebase', color: 'bg-blue-50 text-blue-500' },
+                { icon: Database, label: 'AI Solutions', sub: 'Gemini API & NLP', color: 'bg-purple-50 text-purple-500' },
+                { icon: GraduationCap, label: 'Education', sub: 'Currently Pursuing B.Tech IT', color: 'bg-orange-50 text-orange-500' }
               ].map((item, i) => (
                 <motion.div 
                   key={item.label}

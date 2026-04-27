@@ -3,31 +3,38 @@ import { ExternalLink, ArrowRight, Sparkles } from 'lucide-react';
 
 const projects = [
   {
+    title: 'Waste Swap Network',
+    category: 'AI-Powered Circular Economy',
+    description: 'Built an AI-powered circular economy platform for urban waste management, integrating Google Gemini API for multimodal image-based waste classification across 5+ waste categories. Developed a bilingual (English/Tamil) voice assistant using NLP for inclusive accessibility. Designed a peer-to-peer swap marketplace with real-time Firebase Firestore sync and environmental impact tracking dashboard.',
+    tags: ['React 18', 'Vite', 'Node.js', 'Firebase', 'Google Gemini API', 'Tailwind CSS'],
+    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800'
+  },
+  {
     title: 'SmartQCare',
-    category: 'Web Queue Management System',
-    description: 'Developed a web and mobile-based queue management system with priority-based token assignment and an AI-powered chatbot, implementing real-time database synchronization, structured user workflows, and scalable architecture.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Flutter', 'Firebase Realtime Database'],
+    category: 'Full-Stack Queue Management',
+    description: 'Built a web + Flutter mobile queue management system with priority-based token logic and an AI-powered chatbot, reducing manual queue handling using Firebase real-time sync across both platforms.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Flutter', 'Firebase'],
     image: 'https://i.postimg.cc/G3zFnzNd/image.png'
   },
   {
     title: 'Panchakarma Patient Management System',
     category: 'Healthcare Management Platform',
-    description: 'Enhanced a digital patient management system for Panchakarma therapies by implementing automated scheduling, real-time patient tracking, notification systems, and feedback-driven therapy adjustments with secure backend integration.',
+    description: 'Developed a healthcare management platform with automated scheduling, real-time patient tracking, and push notifications, supporting end-to-end backend integration with Node.js and MongoDB.',
     tags: ['React', 'Vite', 'Node.js', 'MongoDB'],
     image: 'https://i.postimg.cc/65tCxzFV/Screenshot_2025_09_17_183040.png'
   },
   {
     title: 'Musify',
     category: 'Web-Based Music Application',
-    description: 'Built a responsive music streaming web application using reusable React components and Firebase backend integration for authentication, real-time data storage, and dynamic content rendering during a web technology internship.',
+    description: 'Created a responsive music web app with reusable React components, Firebase-based user authentication, and real-time data storage; deployed and accessible via live URL.',
     tags: ['HTML', 'CSS', 'React.js', 'Firebase'],
     image: 'https://i.postimg.cc/J4Y0Yq8B/image.png'
   },
   {
     title: 'Memory Cards',
     category: 'Flutter Mobile Application',
-    description: 'Developed a cross-platform memory card game featuring card flip animations, state management, score tracking logic, responsive UI design, and structured project architecture with version control.',
-    tags: ['Flutter', 'Dart', 'Git', 'GitHub'],
+    description: 'Developed a cross-platform memory card game with smooth animations, state management, and score tracking across Android and iOS.',
+    tags: ['Flutter', 'Dart'],
     image: 'https://i.postimg.cc/3xLrK0hy/image.png'
   }
 ];

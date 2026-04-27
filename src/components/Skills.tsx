@@ -4,25 +4,25 @@ import { Sparkles, Terminal } from 'lucide-react';
 const skillCategories = [
   {
     title: 'Frontend',
-    skills: ['React', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript'],
+    skills: ['React', 'Tailwind CSS', 'Flutter', 'HTML5', 'CSS3', 'JavaScript'],
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     accent: 'bg-blue-500'
   },
   {
     title: 'Backend',
-    skills: ['Node.js', 'MongoDB', 'Firebase'],
+    skills: ['Node.js', 'MongoDB', 'Firebase', 'Google Gemini API'],
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
     accent: 'bg-emerald-500'
   },
   {
     title: 'Tools & Platforms',
-    skills: ['Git & GitHub', 'Figma', 'Vercel', 'Netlify', 'VS Code'],
+    skills: ['Git & GitHub', 'Figma', 'VS Code', 'Dart'],
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
     accent: 'bg-purple-500'
   },
   {
-    title: 'Others',
-    skills: ['TypeScript'],
+    title: 'AI & Others',
+    skills: ['NLP', 'TypeScript', 'Vite'],
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     accent: 'bg-orange-500'
   }
